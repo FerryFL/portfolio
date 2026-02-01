@@ -54,7 +54,7 @@ const Projects = () => {
                                 <div className="relative w-full h-full flex justify-center items-center">
                                     <Image src="/img/nextjs.png" alt="next" width={100} height={100} />
                                 </div>
-                                <p className="font-bold text-center text-lg text-white">Next JS</p>
+                                <p className="font-bold text-center text-lg text-white/70">Next JS</p>
                             </Card>
                         ))}
                     </div>

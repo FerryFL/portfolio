@@ -31,7 +31,7 @@ const LandingPages = () => {
                 </div>
 
                 <div className="flex justify-center items-center gap-5">
-                    <div className="relative flex gap-4 text-5xl sm:text-6xl md:text-6xl lg:text-6xl xl:text-7xl font-bold">
+                    <div className="relative flex flex-wrap space-x-3 justify-center text-5xl sm:text-6xl md:text-6xl lg:text-6xl xl:text-7xl font-bold">
                         <span className="absolute inset-1 -z-10 bg-custom-linear-indigo blur-xl opacity-30 rounded-lg"></span>
                         <span data-aos="fade-right" data-aos-delay="200" className="pb-3 text-center inline-block bg-linear-to-tr from-cyan-500 to-cyan-600 bg-clip-text text-transparent">Software</span>
                         <span data-aos="fade-left" data-aos-delay="200" className="pb-3 text-center inline-block bg-custom-linear-cyan bg-clip-text text-transparent">Engineer</span>

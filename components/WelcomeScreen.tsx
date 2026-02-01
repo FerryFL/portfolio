@@ -4,7 +4,7 @@ import { motion, type Variants, AnimatePresence } from "motion/react"
 import { useEffect, useState } from "react"
 import AOS from 'aos'
 import 'aos/dist/aos.css';
-import { Code2, Globe, Settings, UsersRound } from "lucide-react";
+import { Code2, Settings, UsersRound } from "lucide-react";
 
 interface WelcomeScreenProps {
     onLoadingComplete?: () => void
@@ -33,11 +33,11 @@ const TypeWriting = (props: TypeWritingProps) => {
     }, [text])
 
     return (
-        <span className="relative">
+        <div data-aos="fade-up" data-aos-delay="1000" className="relative">
             <span className="absolute -inset-4 -z-10 bg-linear-to-r from-cyan-500 to-cyan-700 blur-3xl opacity-40"></span>
-            {displayText}
+            <span className="inline-block bg-custom-linear-indigo bg-clip-text text-transparent">{displayText}</span>
             <span className="animate-pulse">|</span>
-        </span>
+        </div>
     )
 }
 
@@ -139,10 +139,8 @@ const WelcomeScreen = (props: WelcomeScreenProps) => {
                                         <span data-aos="fade-up" data-aos-delay="1000" className="inline-block bg-custom-linear-cyan bg-clip-text text-transparent">Website</span>
                                     </div>
 
-                                    <div className="relative flex justify-center items-center text-md md:text-lg font-bold mt-6">
-                                        <span data-aos="fade-up" data-aos-delay="1000" className="flex gap-2 text-center bg-custom-linear-indigo bg-clip-text text-transparent">
-                                            <TypeWriting text="www.ferryfebrian.com" />
-                                        </span>
+                                    <div className="text-center text-md md:text-lg font-bold mt-6">
+                                        <TypeWriting text="www.ferryfebrian.com" />
                                     </div>
                                 </motion.div>
                             </div>
