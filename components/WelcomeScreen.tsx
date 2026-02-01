@@ -4,9 +4,41 @@ import { motion, type Variants, AnimatePresence } from "motion/react"
 import { useEffect, useState } from "react"
 import AOS from 'aos'
 import 'aos/dist/aos.css';
+import { Code2, Globe, Settings, UsersRound } from "lucide-react";
 
 interface WelcomeScreenProps {
     onLoadingComplete?: () => void
+}
+
+interface TypeWritingProps {
+    text: string
+}
+
+const TypeWriting = (props: TypeWritingProps) => {
+    const { text } = props
+    const [displayText, setDisplayText] = useState('')
+
+    useEffect(() => {
+        let index = 0
+        const timer = setInterval(() => {
+            if (index <= text.length) {
+                setDisplayText(text.slice(0, index))
+                index++
+            } else {
+                clearInterval(timer)
+            }
+        }, 120)
+
+        return () => clearInterval(timer)
+    }, [text])
+
+    return (
+        <span className="relative">
+            <span className="absolute -inset-4 -z-10 bg-linear-to-r from-cyan-500 to-cyan-700 blur-3xl opacity-40"></span>
+            {displayText}
+            <span className="animate-pulse">|</span>
+        </span>
+    )
 }
 
 const WelcomeScreen = (props: WelcomeScreenProps) => {
@@ -69,22 +101,48 @@ const WelcomeScreen = (props: WelcomeScreenProps) => {
                         <div className="relative min-h-screen flex items-center justify-center px-4">
                             <div className="w-full max-w-4xl mx-auto">
                                 <motion.div
-                                    className="text-center mb-6 sm:mb-8 md:mb-12"
+                                    className="text-center mb-6 sm:mb-8 md:mb-12 flex flex-col items-center justify-center"
                                     variants={childVariants}
                                 >
-                                    <div className="mb-2 text-2xl text-white md:text-4xl font-bold">
-                                        <span data-aos="fade-down" data-aos-delay="200" className="inline-block">Welcome</span>{' '}
-                                        <span data-aos="fade-down" data-aos-delay="400" className="inline-block">To</span>{' '}
-                                        <span data-aos="fade-down" data-aos-delay="600" className="inline-block">My</span>
+                                    <div className="flex gap-8 mb-6">
+                                        <div data-aos="fade-down" data-aos-delay="200" className="relative">
+                                            <span className="absolute inset-0 -z-10 bg-custom-linear-indigo blur-lg opacity-80"></span>
+                                            <div className="flex justify-center items-center rounded-xl px-2 py-2 bg-linear-to-tr from-cyan-500/60 to-indigo-500/60 border border-white/10 group hover:scale-105 duration-300">
+                                                <Code2 className="text-white/70 size-6 group-hover:rotate-12" />
+                                            </div>
+                                        </div>
+
+                                        <div data-aos="fade-down" data-aos-delay="400" className="relative">
+                                            <span className="absolute inset-0 -z-10 bg-custom-linear-indigo blur-lg opacity-80"></span>
+                                            <div className="flex justify-center items-center rounded-xl px-2 py-2 bg-linear-to-tr from-cyan-500/60 to-indigo-500/60 border border-white/10 group hover:scale-105 duration-300">
+                                                <UsersRound className="text-white/70 size-6 group-hover:rotate-12" />
+                                            </div>
+                                        </div>
+
+                                        <div data-aos="fade-down" data-aos-delay="600" className="relative">
+                                            <span className="absolute inset-0 -z-10 bg-custom-linear-indigo blur-lg opacity-80"></span>
+                                            <div className="flex justify-center items-center rounded-xl px-2 py-2 bg-linear-to-tr from-cyan-500/60 to-indigo-500/60 border border-white/10 group hover:scale-105 duration-300">
+                                                <Settings className="text-white/70 size-6 group-hover:rotate-12" />
+                                            </div>
+                                        </div>
                                     </div>
-                                    <div className="text-5xl md:text-6xl font-bold">
+
+                                    <div className="relative mb-2 text-2xl text-white md:text-4xl font-bold">
+                                        {/* <span className="absolute -inset-4 -z-10 bg-linear-to-r from-cyan-500 to-cyan-700 blur-3xl opacity-40"></span> */}
+                                        <span data-aos="fade-down" data-aos-delay="200" className="inline-block bg-linear-to-tr from-cyan-100 to-cyan-200 bg-clip-text text-transparent">Welcome</span>{' '}
+                                        <span data-aos="fade-down" data-aos-delay="400" className="inline-block bg-linear-to-tr from-cyan-100 to-cyan-200 bg-clip-text text-transparent">To</span>{' '}
+                                        <span data-aos="fade-down" data-aos-delay="600" className="inline-block bg-linear-to-tr from-cyan-100 to-cyan-200 bg-clip-text text-transparent">My</span>
+                                    </div>
+                                    <div className="relative text-5xl md:text-6xl font-bold">
+                                        <span className="absolute -inset-4 -z-10 bg-linear-to-r from-cyan-500 to-cyan-700 blur-3xl opacity-40"></span>
                                         <span data-aos="fade-up" data-aos-delay="800" className="inline-block bg-custom-linear-indigo bg-clip-text text-transparent">Portfolio</span>{' '}
                                         <span data-aos="fade-up" data-aos-delay="1000" className="inline-block bg-custom-linear-cyan bg-clip-text text-transparent">Website</span>
                                     </div>
 
-                                    <div className="relative text-md md:text-lg font-bold mt-6">
-                                        <span className="absolute -inset-2 bg-linear-to-r from-cyan-500 to-cyan-700 blur-3xl opacity-20"></span>
-                                        <span data-aos="fade-up" data-aos-delay="1000" className="inline-block bg-custom-linear-indigo bg-clip-text text-transparent">www.ferryfebrian.com</span>
+                                    <div className="relative flex justify-center items-center text-md md:text-lg font-bold mt-6">
+                                        <span data-aos="fade-up" data-aos-delay="1000" className="flex gap-2 text-center bg-custom-linear-indigo bg-clip-text text-transparent">
+                                            <TypeWriting text="www.ferryfebrian.com" />
+                                        </span>
                                     </div>
                                 </motion.div>
                             </div>

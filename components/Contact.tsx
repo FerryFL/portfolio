@@ -13,8 +13,8 @@ const Contact = () => {
                         <div className="w-fit p-4 bg-custom-linear-cyan rounded-lg text-white">
                             <Mail className="group-hover:rotate-12" />
                         </div>
-                        <p className="text-white font-bold text-lg">Email</p>
-                        <span className="text-white">ferryfebrian.lim@gmail.com</span>
+                        <p className="text-white/80 font-bold text-lg">Email</p>
+                        <span className="text-white/80">ferryfebrian.lim@gmail.com</span>
                     </div>
                 </Card>
                 <Card className="w-80 bg-transparent bg-linear-to-tr from-cyan-500/70 to-indigo-500/70 hover:scale-105 duration-300">
@@ -22,8 +22,8 @@ const Contact = () => {
                         <div className="w-fit p-4 bg-custom-linear-cyan rounded-lg text-white">
                             <Phone />
                         </div>
-                        <p className="text-white font-bold text-lg">Whatsapp</p>
-                        <span className="text-white">+62 898 8433 850</span>
+                        <p className="text-white/80 font-bold text-lg">Whatsapp</p>
+                        <span className="text-white/80">+62 898 8433 850</span>
                     </div>
                 </Card>
                 <Card className="w-80 bg-transparent bg-linear-to-tr from-cyan-500/70 to-indigo-500/70 hover:scale-105 duration-300">
@@ -31,8 +31,8 @@ const Contact = () => {
                         <div className="w-fit p-4 bg-custom-linear-cyan rounded-lg text-white">
                             <Share2 />
                         </div>
-                        <p className="text-white font-bold text-lg">Linkedin</p>
-                        <span className="text-white">www.linkedin.com/in/ferry-febrian-it/</span>
+                        <p className="text-white/80 font-bold text-lg">Linkedin</p>
+                        <span className="text-white/80">www.linkedin.com/in/ferry-febrian-it/</span>
                     </div>
                 </Card>
             </div>

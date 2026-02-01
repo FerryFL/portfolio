@@ -15,11 +15,11 @@ const Projects = () => {
                 <TabsList className="bg-transparent border border-indigo-500/40 w-full py-8 px-2">
                     <TabsTrigger value="project" className="py-6">
                         <Code />
-                        <span className="font-bold text-base">Projects</span>
+                        <span className="font-bold text-base text-white/70">Projects</span>
                     </TabsTrigger>
                     <TabsTrigger value="tech-stack" className="py-6">
                         <Cpu />
-                        <span className="font-bold text-base">Tech Stack</span>
+                        <span className="font-bold text-base text-white/70">Tech Stack</span>
                     </TabsTrigger>
                 </TabsList>
                 <TabsContent value="project">
@@ -29,14 +29,19 @@ const Projects = () => {
                                 <div className="relative w-full h-52 overflow-hidden rounded-lg">
                                     <Image src="/img/erec.png" alt="Erecruitment" fill className="object-cover group-hover:scale-105 duration-500" />
                                 </div>
-                                <h1 className="text-lg bg-linear-to-r from-cyan-200 to-indigo-200 bg-clip-text text-transparent font-bold">Kawan Lama E-Recruitment</h1>
+                                <h1 className="text-lg text-white/90 font-bold">Kawan Lama E-Recruitment</h1>
                                 <p className="text-gray-300 flex-wrap line-clamp-2">Kawan Lama E-Recruitment merupakan website rekrutmen sebagai media untuk kandidat dapat mendaftar menjadi bagian</p>
                                 <div className="flex justify-between mt-2">
                                     <Link href="https://karir.kawanlamagroup.com/" className="text-blue-400 hover:underline flex gap-1 justify-center items-center">
                                         <ExternalLink className="size-5" />
                                         Live App
                                     </Link>
-                                    <Button className="text-black bg-linear-to-tr from-cyan-200 to-indigo-200 hover:cursor-pointer hover:scale-105">Detail <ArrowRight /></Button>
+                                    <Button className="text-black bg-white/80 hover:cursor-pointer hover:scale-105">
+                                        <span className="font-bold bg-linear-to-tr from-cyan-500 to-indigo-500 bg-clip-text text-transparent">
+                                            Detail
+                                        </span>
+                                        <ArrowRight className="text-cyan-800/40" />
+                                    </Button>
                                 </div>
                             </Card>
                         ))}
