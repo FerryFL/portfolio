@@ -1,4 +1,5 @@
 interface Attachment {
+    id?: string,
     image: string,
     name: string,
     description?: string,
@@ -9,33 +10,38 @@ export const TECH_STACK = ["TypeScript", "Javascript", "C#", "Python", "ASP.NET"
 
 export const project: Attachment[] = [
     {
+        id: "PRJ001",
         image: "/img/erec.png",
         name: "Kawan Lama E-Recruiment",
-        description: "Kawan Lama E-Recruitment merupakan",
+        description: "Kawan Lama E-Recruitment merupakan website karir yang mengelola proses rekrutmen kandidat karyawan Kawan Lama Group",
         link: "https://karir.kawanlamagroup.com/",
     },
     {
+        id: "PRJ002",
         image: "/img/kla.png",
         name: "Kawan Lama Academy",
-        description: "Kawan Lama Academy merupakan",
+        description: "Kawan Lama Academy merupakan platform pembelajaran bagi for 30.000+ karyawan internal Kawan Lama Group",
         link: "https://klacademy.klgsys.com/"
     },
     {
+        id: "PRJ003",
         image: "/img/posnova.png",
         name: "POSnova",
-        description: "POSnova adalah",
+        description: "POSnova adalah aplikasi Point of Sales berbasis website dengan sistem rekomendasi berbasis AI",
         link: "https://posnova-skripsi.vercel.app/"
     },
     {
+        id: "PRJ004",
         image: "/img/mykhodam.png",
         name: "My Khodam",
-        description: "My Khodam adalah",
+        description: "My Khodam adalah website entertainment yang mengenerate khodam berdasarkan nama seseorang",
         link: "https://my-khodam.vercel.app/"
     },
     {
+        id: "PRJ005",
         image: "/img/onepercent.png",
         name: "One Percent",
-        description: "One Percent merupakan",
+        description: "One Percent merupakan website self improvement yang bertujuan meningkatkan produktivitas pengguna",
         link: "https://one-percent-ten.vercel.app/"
     },
 ]

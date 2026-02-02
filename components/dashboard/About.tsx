@@ -1,5 +1,5 @@
 import { Code, FileText, Quote } from "lucide-react"
-import { Button } from "./ui/button"
+import { Button } from "../ui/button"
 import { animate } from "motion"
 
 const About = () => {
@@ -24,9 +24,16 @@ const About = () => {
                         <Quote className="text-gray-700" /><span className="italic">{`"Motivation gets you going, but discipline keeps you growing"`}</span>
                     </div>
                     <div data-aos="fade-up" data-aos-delay="200" className="flex gap-4 justify-center md:justify-start">
-                        <Button variant="gradient" size="lg" className="text-white/70 group hover:scale-105 duration-300">
-                            <FileText className="group-hover:rotate-12" />
-                            <span >Download CV</span>
+                        <Button variant="gradient" size="lg" className="text-white/70 group hover:scale-105 duration-300" asChild>
+                            <a
+                                href="/CV_Ferry_Febrian.pdf"
+                                download="CV_Ferry_Febrian.pdf"
+                                target="blank"
+                                rel="noopener noreferrer"
+                            >
+                                <FileText className="group-hover:rotate-12" />
+                                <span >Download CV</span>
+                            </a>
                         </Button>
                         <Button
                             variant="outlineGradient"

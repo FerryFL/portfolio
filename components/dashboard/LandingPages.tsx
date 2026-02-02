@@ -1,5 +1,5 @@
 import { TECH_STACK } from "@/constants/projects"
-import { Button } from "./ui/button"
+import { Button } from "../ui/button"
 import { Code, Code2, Settings, UsersRound } from "lucide-react";
 import { animate } from "motion";
 

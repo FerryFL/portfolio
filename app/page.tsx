@@ -1,13 +1,13 @@
 'use client'
 
 import { useEffect, useState } from "react";
-import AnimatedBackground from "../components/AnimatedBackground";
+import AnimatedBackground from "../components/dashboard/AnimatedBackground";
 import WelcomeScreen from "../components/WelcomeScreen";
 import Aos from "aos";
-import About from "../components/About";
-import LandingPages from "@/components/LandingPages";
-import Projects from "@/components/Projects";
-import Contact from "@/components/Contact";
+import About from "../components/dashboard/About";
+import LandingPages from "@/components/dashboard/LandingPages";
+import Projects from "@/components/dashboard/Projects";
+import Contact from "@/components/dashboard/Contact";
 
 interface LandingPageProps {
     showWelcome: boolean
