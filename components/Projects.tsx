@@ -5,6 +5,54 @@ import Image from "next/image"
 import Link from "next/link"
 import { Button } from "./ui/button"
 
+interface TechStack {
+    image: string,
+    name: string,
+}
+
+const techStack: TechStack[] = [
+    {
+        image: "/img/javascript.svg",
+        name: "Javascript ES6+"
+    },
+    {
+        image: "/img/csharp.svg",
+        name: "C#"
+    },
+    {
+        image: "/img/python.svg",
+        name: "Python"
+    },
+    {
+        image: "/img/dotnet.svg",
+        name: "ASP.NET"
+    },
+    {
+        image: "/img/vuejs.svg",
+        name: "Vue JS"
+    },
+    {
+        image: "/img/reactjs.svg",
+        name: "React JS"
+    },
+    {
+        image: "/img/nuxtjs.svg",
+        name: "Nuxt JS",
+    },
+    {
+        image: "/img/nextjs.svg",
+        name: "Next JS",
+    },
+    {
+        image: "/img/flask.svg",
+        name: "Flask",
+    },
+    {
+        image: "/img/git.svg",
+        name: "Git",
+    },
+]
+
 const Projects = () => {
     return (
         <div id="Projects" className="w-full min-h-screen flex flex-col px-[5%] lg:px-[10%] py-10">
@@ -49,12 +97,12 @@ const Projects = () => {
                 </TabsContent>
                 <TabsContent value="tech-stack">
                     <div data-aos="fade-up" className="flex gap-4 justify-center flex-wrap">
-                        {[...Array(10)].map((_, i) => (
-                            <Card key={i} className="w-40 h-48 p-4 group bg-transparent bg-linear-to-tr from-cyan-500/60 to-indigo-500/60 hover:scale-105 duration-300 transition-all">
+                        {techStack.map((item, i) => (
+                            <Card key={i} className="w-40 h-48 p-8 group bg-transparent bg-linear-to-tr from-cyan-500/60 to-indigo-500/60 hover:scale-105 duration-300 transition-all">
                                 <div className="relative w-full h-full flex justify-center items-center">
-                                    <Image src="/img/nextjs.png" alt="next" width={100} height={100} />
+                                    <Image src={item.image} alt={item.name} width={16} height={16} className="w-16 h-16" />
                                 </div>
-                                <p className="font-bold text-center text-lg text-white/70">Next JS</p>
+                                <p className="font-bold text-center text-lg text-white/70">{item.name}</p>
                             </Card>
                         ))}
                     </div>
