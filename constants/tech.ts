@@ -1,1 +1,0 @@
-export const TECH_STACK = ["TypeScript", "Vue", "React", "Next JS", "Nuxt JS", "ASP.NET", "Git", "Jenkins", "SQL", "Python", "AI / ML"]

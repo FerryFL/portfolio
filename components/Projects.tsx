@@ -5,15 +5,54 @@ import Image from "next/image"
 import Link from "next/link"
 import { Button } from "./ui/button"
 
-interface TechStack {
+interface Attachment {
     image: string,
     name: string,
+    description?: string,
+    link?: string,
 }
 
-const techStack: TechStack[] = [
+const project: Attachment[] = [
+    {
+        image: "/img/erec.png",
+        name: "Kawan Lama E-Recruiment",
+        description: "Kawan Lama E-Recruitment merupakan",
+        link: "https://karir.kawanlamagroup.com/",
+    },
+    {
+        image: "/img/kla.png",
+        name: "Kawan Lama Academy",
+        description: "Kawan Lama Academy merupakan",
+        link: "https://klacademy.klgsys.com/"
+    },
+    {
+        image: "/img/posnova.png",
+        name: "POSnova",
+        description: "POSnova adalah",
+        link: "https://posnova-skripsi.vercel.app/"
+    },
+    {
+        image: "/img/mykhodam.png",
+        name: "My Khodam",
+        description: "My Khodam adalah",
+        link: "https://my-khodam.vercel.app/"
+    },
+    {
+        image: "/img/onepercent.png",
+        name: "One Percent",
+        description: "One Percent merupakan",
+        link: "https://one-percent-ten.vercel.app/"
+    },
+]
+
+const techStack: Attachment[] = [
+    {
+        image: "/img/typescript.svg",
+        name: "Typescript"
+    },
     {
         image: "/img/javascript.svg",
-        name: "Javascript ES6+"
+        name: "JS ES6+"
     },
     {
         image: "/img/csharp.svg",
@@ -72,15 +111,18 @@ const Projects = () => {
                 </TabsList>
                 <TabsContent value="project">
                     <div data-aos="fade-up" className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4">
-                        {[...Array(3)].map((_, i) => (
+                        {project.map((item, i) => (
                             <Card key={i} className="w-full px-5 h-96 group bg-transparent bg-linear-to-tr from-cyan-500/60 to-indigo-500/60">
-                                <div className="relative w-full h-52 overflow-hidden rounded-lg">
-                                    <Image src="/img/erec.png" alt="Erecruitment" fill className="object-cover group-hover:scale-105 duration-500" />
+                                <div className="relative w-full h-52 overflow-hidden rounded-lg ">
+                                    <Image src={item.image} alt={item.name} fill className="object-cover group-hover:scale-105 duration-500" />
+                                    <div className="absolute bg-black/40 z-10 inset-0">
+
+                                    </div>
                                 </div>
-                                <h1 className="text-lg text-white/90 font-bold">Kawan Lama E-Recruitment</h1>
-                                <p className="text-gray-300 flex-wrap line-clamp-2">Kawan Lama E-Recruitment merupakan website rekrutmen sebagai media untuk kandidat dapat mendaftar menjadi bagian</p>
+                                <h1 className="text-lg text-white/90 font-bold">{item.name}</h1>
+                                <p className="text-gray-300 flex-wrap line-clamp-2">{item.description}</p>
                                 <div className="flex justify-between mt-2">
-                                    <Link href="https://karir.kawanlamagroup.com/" className="text-blue-400 hover:underline flex gap-1 justify-center items-center">
+                                    <Link href={item.link ?? ''} className="text-blue-400 hover:underline flex gap-1 justify-center items-center">
                                         <ExternalLink className="size-5" />
                                         Live App
                                     </Link>

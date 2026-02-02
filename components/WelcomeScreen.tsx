@@ -129,9 +129,9 @@ const WelcomeScreen = (props: WelcomeScreenProps) => {
 
                                     <div className="relative mb-2 text-2xl text-white md:text-4xl font-bold">
                                         {/* <span className="absolute -inset-4 -z-10 bg-linear-to-r from-cyan-500 to-cyan-700 blur-3xl opacity-40"></span> */}
-                                        <span data-aos="fade-down" data-aos-delay="200" className="inline-block bg-linear-to-tr from-cyan-100 to-cyan-200 bg-clip-text text-transparent">Welcome</span>{' '}
-                                        <span data-aos="fade-down" data-aos-delay="400" className="inline-block bg-linear-to-tr from-cyan-100 to-cyan-200 bg-clip-text text-transparent">To</span>{' '}
-                                        <span data-aos="fade-down" data-aos-delay="600" className="inline-block bg-linear-to-tr from-cyan-100 to-cyan-200 bg-clip-text text-transparent">My</span>
+                                        <span data-aos="fade-down" data-aos-delay="200" className="pb-3 inline-block bg-linear-to-tr from-cyan-100 to-cyan-200 bg-clip-text text-transparent">Welcome</span>{' '}
+                                        <span data-aos="fade-down" data-aos-delay="400" className="pb-3 inline-block bg-linear-to-tr from-cyan-100 to-cyan-200 bg-clip-text text-transparent">To</span>{' '}
+                                        <span data-aos="fade-down" data-aos-delay="600" className="pb-3 inline-block bg-linear-to-tr from-cyan-100 to-cyan-200 bg-clip-text text-transparent">My</span>
                                     </div>
                                     <div className="relative text-5xl md:text-6xl font-bold">
                                         <span className="absolute -inset-4 -z-10 bg-linear-to-r from-cyan-500 to-cyan-700 blur-3xl opacity-40"></span>
