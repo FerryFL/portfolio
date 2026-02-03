@@ -1,6 +1,7 @@
 import { Code, FileText, Quote } from "lucide-react"
 import { Button } from "../ui/button"
 import { animate } from "motion"
+import Image from "next/image"
 
 const About = () => {
     return (
@@ -60,8 +61,9 @@ const About = () => {
                 </div>
                 <div className="flex flex-1 justify-center items-center order-1 md:order-2">
                     <div className="relative">
-                        <div className="absolute -inset-4 bg-linear-to-tr from-indigo-500/20 to-cyan-500/20 blur-2xl rounded-full"></div>
-                        <div className="relative w-64 h-64 md:w-80 md:h-80 bg-zinc-200 rounded-2xl overflow-hidden border border-white/10 shadow-2xl"></div>
+                        <div data-aos="fade-left" className="relative w-52 h-64 md:w-64 md:h-80 bg-zinc-200 rounded-2xl overflow-hidden border border-cyan-700/40 shadow-2xl hover:scale-105 hover:rotate-6 duration-300 transition-all">
+                            <Image src="/img/foto.jpg" alt="foto.jpg" fill />
+                        </div>
                     </div>
                 </div>
             </div>
