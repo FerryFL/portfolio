@@ -5,7 +5,6 @@ import Image from "next/image"
 import Link from "next/link"
 import { Button } from "../ui/button"
 import { project, techStack } from "@/constants/projects"
-import { toast } from "sonner"
 
 const Projects = () => {
     // const handleClick = () => {

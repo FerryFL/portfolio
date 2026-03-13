@@ -8,7 +8,7 @@ import Image from "next/image"
 import Link from "next/link"
 import { redirect, useParams } from "next/navigation"
 
-const Projectasdasd = () => {
+const Project = () => {
     const params = useParams()
     const slug = params.slug as string
 
@@ -18,7 +18,7 @@ const Projectasdasd = () => {
     }
 
     return (
-        <div className="flex flex-col p-10 w-full min-h-screen">
+        <div className="flex flex-col p-6 md:p-10 w-full min-h-screen">
             <AnimatedBackground />
             <div className="w-full">
                 <Button variant="gradient" asChild>
@@ -28,27 +28,15 @@ const Projectasdasd = () => {
                     </Link>
                 </Button>
             </div>
-            <div className="flex my-10 ">
-                <div className="flex-1">
-                    <div className="relative group w-full h-96 overflow-hidden rounded-xl mb-10">
-                        <Image src={currentProject.image} alt={currentProject.name} fill className="object-cover group-hover:scale-105 duration-500" />
-                        <div className="absolute bg-black/40 z-10 inset-0"></div>
-                    </div>
-                    <div className="bg-transparent border-cyan-700/60 border p-6 space-y-4 rounded-2xl">
-                        <div className="flex gap-2">
-                            <Star className="text-cyan-800" />
-                            <h1 className="text-white/70">Key Features</h1>
-                        </div>
-                        <div className="flex flex-col gap-1 ps-6">
-                            {currentProject.feature?.map((item, index) => (
-                                <div key={index} className="text-white/70">- {item}</div>
-                            ))}
-                        </div>
-                    </div>
-                </div>
-                <div className="flex-1 px-10 gap-6 flex flex-col">
-                    <p className="bg-custom-linear-cyan bg-clip-text text-transparent text-5xl pb-3 font-bold">{currentProject.name}</p>
+
+            <div className="flex flex-col lg:flex-row my-10 gap-8">
+
+                <div className="flex-1 gap-6 flex flex-col order-1 lg:order-2 lg:px-10">
+                    <p className="bg-custom-linear-cyan bg-clip-text text-transparent text-3xl md:text-5xl pb-1 font-bold">
+                        {currentProject.name}
+                    </p>
                     <p className="text-gray-400">{currentProject.description}</p>
+
                     <div className="grid grid-cols-2 gap-3 md:gap-4 p-3 md:p-4 bg-[#0a0a1a] rounded-xl overflow-hidden relative">
                         <div className="absolute inset-0 bg-linear-to-br from-blue-900/20 to-purple-900/20 opacity-50 blur-2xl z-0" />
 
@@ -72,21 +60,41 @@ const Projectasdasd = () => {
                             </div>
                         </div>
                     </div>
+
                     <div className="bg-transparent border-cyan-700/60 border p-6 space-y-4 rounded-2xl">
                         <div className="flex gap-2">
                             <Code2 className="text-cyan-800" />
                             <h1 className="text-white/70">Technology Used</h1>
                         </div>
-                        <div className="flex flex-wrap gap-2 ">
+                        <div className="flex flex-wrap gap-2">
                             {currentProject.tech?.map((item, index) => (
                                 <div className="p-2 px-4 bg-black/30 text-white/70 rounded-xl text-sm hover:scale-105 duration-200" key={index}>{item}</div>
                             ))}
                         </div>
                     </div>
                 </div>
+
+                <div className="flex-1 order-2 lg:order-1">
+                    <div className="relative group w-full h-56 md:h-96 overflow-hidden rounded-xl mb-6">
+                        <Image src={currentProject.image} alt={currentProject.name} fill className="object-cover group-hover:scale-105 duration-500" />
+                        <div className="absolute bg-black/40 z-10 inset-0"></div>
+                    </div>
+                    <div className="bg-transparent border-cyan-700/60 border p-6 space-y-4 rounded-2xl">
+                        <div className="flex gap-2">
+                            <Star className="text-cyan-800" />
+                            <h1 className="text-white/70">Key Features</h1>
+                        </div>
+                        <div className="flex flex-col gap-1 ps-6">
+                            {currentProject.feature?.map((item, index) => (
+                                <div key={index} className="text-white/70">- {item}</div>
+                            ))}
+                        </div>
+                    </div>
+                </div>
+
             </div>
         </div>
     )
 }
 
-export default Projectasdasd
+export default Project
