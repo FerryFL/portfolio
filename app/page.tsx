@@ -50,10 +50,31 @@ const LandingPage = (props: LandingPageProps) => {
 }
 
 export default function Home() {
+    // const [showWelcome, setShowWelcome] = useState(true)
     const [showWelcome, setShowWelcome] = useState(true)
 
+    const handleWelcome = () => {
+        sessionStorage.setItem("welcome", "true")
+        setShowWelcome(false)
+    }
+
+    useEffect(() => {
+        if (sessionStorage.getItem("welcome")) {
+            setTimeout(() => setShowWelcome(false), 0)
+        }
+    }, [])
+
+    useEffect(() => {
+        if (!showWelcome && location.hash) {
+            const el = document.querySelector(location.hash)
+            if (el) {
+                el.scrollIntoView({ behavior: 'smooth' })
+            }
+        }
+    }, [showWelcome])
+
     return (
-        <LandingPage showWelcome={showWelcome} setShowWelcome={setShowWelcome} />
+        <LandingPage showWelcome={showWelcome} setShowWelcome={handleWelcome} />
     );
 }
 

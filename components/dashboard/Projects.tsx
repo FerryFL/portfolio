@@ -8,9 +8,9 @@ import { project, techStack } from "@/constants/projects"
 import { toast } from "sonner"
 
 const Projects = () => {
-    const handleClick = () => {
-        toast.warning("Under Development")
-    }
+    // const handleClick = () => {
+    //     toast.warning("Under Development")
+    // }
 
     return (
         <div id="Projects" className="w-full min-h-screen flex flex-col px-[5%] lg:px-[10%] py-10">
@@ -43,18 +43,18 @@ const Projects = () => {
                                         <ExternalLink className="size-5" />
                                         Live App
                                     </Link>
-                                    <Button className="text-white/70 hover:cursor-pointer hover:scale-105" variant="gradient" onClick={handleClick}>
-                                        {/* <Link href={`/project/${item.id}`}>
+                                    <Button className="text-white/70 hover:cursor-pointer hover:scale-105" variant="gradient" asChild>
+                                        <Link href={`/project/${item.id}`}>
                                             <span className="font-bold">
                                                 Detail
                                             </span>
                                             <ArrowRight />
-                                        </Link> */}
+                                        </Link>
 
-                                        <span className="font-bold">
+                                        {/* <span className="font-bold">
                                             Detail
                                         </span>
-                                        <ArrowRight />
+                                        <ArrowRight /> */}
                                     </Button>
                                 </div>
                             </Card>
