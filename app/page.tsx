@@ -1,80 +1,33 @@
 'use client'
 
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import AnimatedBackground from "../components/dashboard/AnimatedBackground";
-import WelcomeScreen from "../components/WelcomeScreen";
 import Aos from "aos";
 import About from "../components/dashboard/About";
 import LandingPages from "@/components/dashboard/LandingPages";
 import Projects from "@/components/dashboard/Projects";
 import Contact from "@/components/dashboard/Contact";
 
-interface LandingPageProps {
-    showWelcome: boolean
-    setShowWelcome: (value: boolean) => void
-}
-
-const LandingPage = (props: LandingPageProps) => {
-    const { showWelcome, setShowWelcome } = props
+export default function Home() {
 
     useEffect(() => {
-        const init = () => {
-            Aos.init({
-                once: false,
-            })
-        }
-
-        init()
+        Aos.init({
+            once: false,
+            duration: 800,
+            easing: "ease-out-cubic",
+        })
     }, [])
-
 
     return (
         <>
-            {showWelcome && (
-                <WelcomeScreen onLoadingComplete={() => setShowWelcome(false)} />
-            )}
+            <AnimatedBackground />
+            <LandingPages />
+            <About />
+            <Projects />
+            <Contact />
 
-            {!showWelcome && (
-                <>
-                    <AnimatedBackground />
-                    <LandingPages />
-                    <About />
-                    <Projects />
-                    <Contact />
-
-                    <Footer />
-                </>
-            )}
+            <Footer />
         </>
-    )
-}
-
-export default function Home() {
-    // const [showWelcome, setShowWelcome] = useState(true)
-    const [showWelcome, setShowWelcome] = useState(true)
-
-    const handleWelcome = () => {
-        sessionStorage.setItem("welcome", "true")
-        setShowWelcome(false)
-    }
-
-    useEffect(() => {
-        if (sessionStorage.getItem("welcome")) {
-            setTimeout(() => setShowWelcome(false), 0)
-        }
-    }, [])
-
-    useEffect(() => {
-        if (!showWelcome && location.hash) {
-            const el = document.querySelector(location.hash)
-            if (el) {
-                el.scrollIntoView({ behavior: 'smooth' })
-            }
-        }
-    }, [showWelcome])
-
-    return (
-        <LandingPage showWelcome={showWelcome} setShowWelcome={handleWelcome} />
     );
 }
 
