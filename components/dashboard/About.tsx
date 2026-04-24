@@ -2,6 +2,7 @@ import { Code, FileText, Quote } from "lucide-react"
 import { Button } from "../ui/button"
 import { animate } from "motion"
 import Image from "next/image"
+import { sendGAEvent } from "@next/third-parties/google"
 
 const About = () => {
     return (
@@ -25,7 +26,12 @@ const About = () => {
                         <Quote className="text-gray-700" /><span className="italic">{`"Motivation gets you going, but discipline keeps you growing"`}</span>
                     </div>
                     <div data-aos="fade-up" data-aos-delay="200" className="flex gap-4 justify-center md:justify-start">
-                        <Button variant="gradient" size="lg" className="text-white/70 group hover:scale-105 duration-300" asChild>
+						<Button onClick={() => sendGAEvent('event', 'cv_download', {
+						    event_label: 'CV Download - Ferry Febrian',
+						    file_name: 'CV_Ferry_Febrian.pdf',
+						    time_of_day: new Date().getHours(),
+						    day_of_week: new Date().toLocaleDateString('en', { weekday: 'long' }),
+						  })} variant="gradient" size="lg" className="text-white/70 group hover:scale-105 duration-300" asChild>
                             <a
                                 href="/CV_Ferry_Febrian.pdf"
                                 download="CV_Ferry_Febrian.pdf"
