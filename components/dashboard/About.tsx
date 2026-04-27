@@ -17,7 +17,7 @@ const About = () => {
                 <div className="flex flex-col flex-1 gap-6 order-2 md:order-1">
                     <div className="flex flex-col text-center md:text-left" data-aos="fade-right" data-aos-delay="200">
                         <p className="text-2xl sm:text-3xl lg:text-4xl font-bold inline-block bg-custom-linear-cyan bg-clip-text text-transparent">{`Hello, I'm`}</p>
-                        <p className="text-2xl sm:text-3xl lg:text-4xl font-bold text-white/70">Ferry Febrian</p>
+                        <h1 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-white/70">Ferry Febrian</h1>
                     </div>
                     <p data-aos="fade-right" data-aos-delay="200" className="text-gray-400 block text-justify">
                         {`I'm a Fresh Graduate (Awaiting Graduation) majoring in Computer Science at Bina Nusantara University, with the insightful experience as a part-time System Analyst at IT Division, and currently serving as intern Software Engineer at Kawan Lama Group`}
@@ -32,7 +32,8 @@ const About = () => {
 						    time_of_day: new Date().getHours(),
 						    day_of_week: new Date().toLocaleDateString('en', { weekday: 'long' }),
 						  })} variant="gradient" size="lg" className="text-white/70 group hover:scale-105 duration-300" asChild>
-                            <a
+							<a
+								title="Download CV Ferry Febrian (PDF)"
                                 href="/CV_Ferry_Febrian.pdf"
                                 download="CV_Ferry_Febrian.pdf"
                                 target="blank"
@@ -68,7 +69,7 @@ const About = () => {
                 <div className="flex flex-1 justify-center items-center order-1 md:order-2">
                     <div className="relative">
                         <div data-aos="fade-left" className="relative w-52 h-64 md:w-60 md:h-80 bg-zinc-200 rounded-2xl overflow-hidden border border-cyan-700/40 shadow-2xl hover:scale-105 hover:rotate-4 duration-300 transition-all">
-                            <Image src="/img/foto.jpg" alt="foto.jpg" fill />
+                            <Image src="/img/foto.jpg" alt="Ferry Febrian - Software Engineer" fill priority />
                         </div>
                     </div>
                 </div>
