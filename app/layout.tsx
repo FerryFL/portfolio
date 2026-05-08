@@ -15,10 +15,14 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-	title: "Ferry Febrian | Portfolio",
-	icons: {
-		icon: "/logo_porto_ff.png"
-	}
+  metadataBase: new URL('https://ferryfebrian.com'),
+  alternates: {
+    canonical: '/',
+  },
+  title: "Ferry Febrian | Portfolio",
+  icons: {
+    icon: "/logo_porto_ff.png"
+  }
 };
 
 export default function RootLayout({
