@@ -8,33 +8,21 @@ const LandingPages = () => {
 		<div className="w-full px-[5%] lg:px-[10%]">
 			<div className="flex justify-center items-center flex-col min-h-screen">
 				<div className="flex gap-8 mb-6">
-					<div
-						data-aos="fade-down"
-						data-aos-delay="200"
-						className="relative"
-					>
+					<div className="relative">
 						<span className="absolute inset-0 -z-10 bg-custom-linear-indigo blur-lg opacity-80"></span>
 						<div className="flex justify-center items-center rounded-xl px-2 py-2 bg-linear-to-tr from-cyan-500/60 to-indigo-500/60 border border-white/10 group hover:scale-105 duration-300">
 							<Code2 className="text-white/70 size-6 group-hover:rotate-12" />
 						</div>
 					</div>
 
-					<div
-						data-aos="fade-down"
-						data-aos-delay="400"
-						className="relative"
-					>
+					<div className="relative">
 						<span className="absolute inset-0 -z-10 bg-custom-linear-indigo blur-lg opacity-80"></span>
 						<div className="flex justify-center items-center rounded-xl px-2 py-2 bg-linear-to-tr from-cyan-500/60 to-indigo-500/60 border border-white/10 group hover:scale-105 duration-300">
 							<UsersRound className="text-white/70 size-6 group-hover:rotate-12" />
 						</div>
 					</div>
 
-					<div
-						data-aos="fade-down"
-						data-aos-delay="600"
-						className="relative"
-					>
+					<div className="relative">
 						<span className="absolute inset-0 -z-10 bg-custom-linear-indigo blur-lg opacity-80"></span>
 						<div className="flex justify-center items-center rounded-xl px-2 py-2 bg-linear-to-tr from-cyan-500/60 to-indigo-500/60 border border-white/10 group hover:scale-105 duration-300">
 							<Settings className="text-white/70 size-6 group-hover:rotate-12" />
@@ -45,37 +33,21 @@ const LandingPages = () => {
 				<div className="flex justify-center items-center gap-5">
 					<div className="relative flex flex-wrap space-x-3 justify-center text-5xl sm:text-6xl md:text-6xl lg:text-6xl xl:text-7xl font-bold">
 						<span className="absolute inset-1 -z-10 bg-custom-linear-indigo blur-xl opacity-30 rounded-lg"></span>
-						<span
-							data-aos="fade-right"
-							data-aos-delay="200"
-							className="pb-3 text-center inline-block bg-linear-to-tr from-cyan-500 to-cyan-600 bg-clip-text text-transparent"
-						>
+						<span className="pb-3 text-center inline-block bg-linear-to-tr from-cyan-500 to-cyan-600 bg-clip-text text-transparent">
 							Software
 						</span>
-						<span
-							data-aos="fade-left"
-							data-aos-delay="200"
-							className="pb-3 text-center inline-block bg-custom-linear-cyan bg-clip-text text-transparent"
-						>
+						<span className="pb-3 text-center inline-block bg-custom-linear-cyan bg-clip-text text-transparent">
 							Engineer
 						</span>
 					</div>
 				</div>
 
-				<p
-					data-aos="fade-up"
-					data-aos-delay="400"
-					className="text-center text-gray-400 mt-2 text-lg"
-				>
+				<p className="text-center text-gray-400 mt-2 text-lg">
 					Specializing in Modern Web Ecosystems
 				</p>
 
 				<div className="relative">
-					<div
-						data-aos="fade-up"
-						data-aos-delay="600"
-						className="flex gap-2 mt-10 flex-wrap justify-center items-center"
-					>
+					<div className="flex gap-2 mt-10 flex-wrap justify-center items-center">
 						<span className="absolute inset-0 -z-10 bg-linear-to-r from-cyan-500 to-cyan-700 blur-2xl opacity-30"></span>
 						{TECH_STACK.map((tech, index) => (
 							<div
@@ -88,11 +60,7 @@ const LandingPages = () => {
 					</div>
 				</div>
 
-				<div
-					data-aos="fade-up"
-					data-aos-delay="600"
-					className="flex mt-6 relative"
-				>
+				<div className="flex mt-6 relative">
 					<span className="absolute inset-0 -z-10 bg-linear-to-r from-cyan-500 to-cyan-700 blur-xl opacity-60"></span>
 					<Button
 						variant="gradient"

@@ -106,15 +106,14 @@ const About = () => {
 				</div>
 				<div className="flex flex-1 justify-center items-center order-1 md:order-2">
 					<div className="relative">
-						<div
-							data-aos="fade-left"
-							className="relative w-52 h-64 md:w-60 md:h-80 bg-zinc-200 rounded-2xl overflow-hidden border border-cyan-700/40 shadow-2xl hover:scale-105 hover:rotate-4 duration-300 transition-all"
-						>
+						<div className="relative w-52 h-64 md:w-60 md:h-80 bg-zinc-200 rounded-2xl overflow-hidden border border-cyan-700/40 shadow-2xl hover:scale-105 hover:rotate-4 duration-300 transition-transform">
 							<Image
 								src="/img/foto.jpg"
 								alt="Ferry Febrian - Software Engineer"
 								fill
 								priority
+								sizes="(max-width: 768px) 208px, 240px"
+								className="object-cover"
 							/>
 						</div>
 					</div>
