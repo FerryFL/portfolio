@@ -32,10 +32,10 @@ const Contact = () => {
 						</span>
 					</div>
 				</Card>
-				<Card className="w-80 bg-transparent border border-cyan-700/60 hover:scale-105 duration-300">
+				<Card className="w-80 group bg-transparent border border-cyan-700/60 hover:scale-105 duration-300">
 					<div className="flex flex-col items-center gap-2">
 						<div className="w-fit p-4 bg-custom-linear-cyan rounded-lg text-white">
-							<Phone />
+							<Phone className="group-hover:rotate-12" />
 						</div>
 						<p className="text-white/80 font-bold text-lg">
 							Whatsapp
@@ -43,10 +43,10 @@ const Contact = () => {
 						<span className="text-white/80">+62 898 8433 850</span>
 					</div>
 				</Card>
-				<Card className="w-80 bg-transparent border border-cyan-700/60 hover:scale-105 duration-300">
+				<Card className="w-80 group bg-transparent border border-cyan-700/60 hover:scale-105 duration-300">
 					<div className="flex flex-col items-center gap-2">
 						<div className="w-fit p-4 bg-custom-linear-cyan rounded-lg text-white">
-							<Share2 />
+							<Share2 className="group-hover:rotate-12" />
 						</div>
 						<p className="text-white/80 font-bold text-lg">
 							Linkedin

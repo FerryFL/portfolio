@@ -37,7 +37,10 @@ const About = () => {
 						data-aos-delay="200"
 						className="text-gray-400 block text-justify"
 					>
-						{`I'm a Fresh Graduate (Awaiting Graduation) majoring in Computer Science at Bina Nusantara University, with the insightful experience as a part-time System Analyst at IT Division, and currently serving as intern Software Engineer at Kawan Lama Group`}
+						{`I'm a Fresh Graduate, Bachelor Degree of Computer Science at Bina Nusantara University, having a wonderful experience as intern Software Engineer at Kawan Lama Group, currently serving as Associate Software Developer at NTT Data`}
+						<br />
+						<br />
+						{`I embrace challenges as opportunities for growth, i'm also constantly seeking to expand my knowledge and skills. I'm dedicated to make impactful contributions to the field of Computer Science and beyond.`}
 					</p>
 					<div
 						data-aos="fade-up"

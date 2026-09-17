@@ -96,30 +96,30 @@ export const project: Attachment[] = [
 			"Flask (Python)",
 		],
 	},
-	{
-		id: "PRJ004",
-		image: "/img/mykhodam.png",
-		name: "My Khodam",
-		description:
-			"My Khodam adalah website entertainment yang mengenerate khodam berdasarkan nama seseorang",
-		link: "https://my-khodam.vercel.app/",
-		feature: [
-			"Check Khodam based on Name + Today Date combination",
-			"Add Khodam Idea",
-			"Add Review",
-		],
-		tech: ["Mongo DB (Atlas)", "React", "Tailwind CSS"],
-	},
-	{
-		id: "PRJ005",
-		image: "/img/onepercent.png",
-		name: "One Percent",
-		description:
-			"One Percent merupakan website self improvement yang bertujuan meningkatkan produktivitas pengguna",
-		link: "https://one-percent-ten.vercel.app/",
-		feature: ["Generate Random Quotes", "CRUD Activity"],
-		tech: ["Mongo DB (Atlas)", "React", "Tailwind CSS"],
-	},
+	// {
+	// 	id: "PRJ004",
+	// 	image: "/img/mykhodam.png",
+	// 	name: "My Khodam",
+	// 	description:
+	// 		"My Khodam adalah website entertainment yang mengenerate khodam berdasarkan nama seseorang",
+	// 	link: "https://my-khodam.vercel.app/",
+	// 	feature: [
+	// 		"Check Khodam based on Name + Today Date combination",
+	// 		"Add Khodam Idea",
+	// 		"Add Review",
+	// 	],
+	// 	tech: ["Mongo DB (Atlas)", "React", "Tailwind CSS"],
+	// },
+	// {
+	// 	id: "PRJ005",
+	// 	image: "/img/onepercent.png",
+	// 	name: "One Percent",
+	// 	description:
+	// 		"One Percent merupakan website self improvement yang bertujuan meningkatkan produktivitas pengguna",
+	// 	link: "https://one-percent-ten.vercel.app/",
+	// 	feature: ["Generate Random Quotes", "CRUD Activity"],
+	// 	tech: ["Mongo DB (Atlas)", "React", "Tailwind CSS"],
+	// },
 ];
 
 export const techStack: Attachment[] = [
